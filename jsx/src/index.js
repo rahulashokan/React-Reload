@@ -12,16 +12,10 @@ const root = ReactDOM.createRoot(el);
 // we will create a component
 
 const App = function () {
-  let name = "Rahul";
-  let age = 27;
-  return (
-    <div>
-      <h1> {new Date().toLocaleTimeString()}</h1>
-      <h2>
-        Hi i am {name} and i am {age} years old
-      </h2>
-    </div>
-  );
+  let inputType = "number";
+  let minValue = 5;
+
+  return <textarea autoFocus spellCheck />;
 };
 
 // show the component on the screen
