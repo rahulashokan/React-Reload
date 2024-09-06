@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(el);
 // we will create a component
 
 const App = function () {
-  return <h1>Hi There</h1>;
+  return <h1>Hi T here</h1>;
 };
 
 // show the component on the screen
