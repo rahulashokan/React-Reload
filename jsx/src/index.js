@@ -17,7 +17,7 @@ const App = function () {
   if (Math.random() >= 0.5) messge = "Hi Maya";
   return (
     <div>
-      <h1>Hi There</h1>
+      <h1>{new Date().toLocaleTimeString()}</h1>
       <h2>{messge}</h2>
     </div>
   );
