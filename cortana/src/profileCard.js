@@ -1,9 +1,13 @@
-function ProfileCard(props) {
+///Obj destructre hence title and handle as variable
+
+function ProfileCard({ title, handle, image }) {
   return (
     <div>
-      <div>Title is {props.title}</div>
+      <img src={image} />
 
-      <div>Handle will be {props.handle}</div>
+      <div>Title is {title}</div>
+
+      <div>Handle will be {handle}</div>
 
       <br></br>
     </div>
