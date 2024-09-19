@@ -1,15 +1,22 @@
 ///Obj destructre hence title and handle as variable
 
-function ProfileCard({ title, handle, image }) {
+function ProfileCard({ title, handle, image, description }) {
   return (
-    <div>
-      <img src={image} />
+    <div className="card">
+      <div className="card-image">
+        <figure className="image is-1by1">
+          <img src={image} alt="ImageDel" />
+        </figure>
+      </div>
 
-      <div>Title is {title}</div>
+      <div className="card-content">
+        <div className="media-content">
+          <p className="title is-4">{title}</p>
 
-      <div>Handle will be {handle}</div>
-
-      <br></br>
+          <p className="sutitle is-6">{handle}</p>
+          <div className="content">{description}</div>
+        </div>
+      </div>
     </div>
   );
 }
