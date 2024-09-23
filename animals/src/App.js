@@ -1,21 +1,24 @@
 import AnimalShow from "./AnimalShow";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+function getRandomAnimals() {
+  const animals = ["bird", "dog", "cat", "horse", "gator", "cow"];
+
+  return animals[Math.floor(Math.random() * animals.length)];
+}
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [animals, setAnimals] = useState([]);
 
+  //   console.log(useState(5));
   const handleClick = () => {
-    setCount(count + 1);
+    setAnimals([...animals, getRandomAnimals()]);
   };
-
-  useEffect(() => {
-    console.log(`User click count is : ${count}`);
-  }, [count]);
 
   return (
     <div>
       <button onClick={handleClick}>Add Animal</button>
-      <div>Number of the count is {count}</div>
+      <div>{animals}</div>
     </div>
   );
 }
