@@ -1,11 +1,23 @@
 import AnimalShow from "./AnimalShow";
-
-const handleClick = () => {
-  console.log("User have clicked the button");
-};
+import { useState, useEffect } from "react";
 
 function App() {
-  return <button onClick={handleClick}>Add Animal</button>;
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  useEffect(() => {
+    console.log(`User click count is : ${count}`);
+  }, [count]);
+
+  return (
+    <div>
+      <button onClick={handleClick}>Add Animal</button>
+      <div>Number of the count is {count}</div>
+    </div>
+  );
 }
 
 export default App;
