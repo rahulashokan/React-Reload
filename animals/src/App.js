@@ -1,4 +1,5 @@
 import AnimalShow from "./AnimalShow";
+import "./App.css";
 import { useState } from "react";
 
 function getRandomAnimals() {
@@ -20,9 +21,9 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="app">
       <button onClick={handleClick}>Add Animal</button>
-      <div>{renderdAnimals}</div>
+      <div className="animal-list">{renderdAnimals}</div>
     </div>
   );
 }
