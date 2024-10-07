@@ -1,5 +1,10 @@
-function ImageList({ image }) {
-  return <div>ImageList : {image.length}</div>;
+import ImageShow from "./ImageShow";
+
+function ImageList({ images }) {
+  const renderedImage = images.map((image) => {
+    return <ImageShow image={image} />;
+  });
+  return <div>{renderedImage}</div>;
 }
 
 export default ImageList;
